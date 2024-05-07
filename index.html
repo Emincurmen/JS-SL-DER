@@ -1,0 +1,105 @@
+<!DOCTYPE 31.25rem
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/df306ad1fb.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .mid{
+            height: 70%;
+            width: 50%;
+            
+            position: relative;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            flex-direction: row;   
+        }
+        .slide{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            border-radius: 18px;
+            transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+        .active
+        {
+            opacity: 1;
+        }
+        .buttons{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            color: whitesmoke;
+        }
+        .passive{
+            opacity: 0;
+        }
+        .prev:hover{
+        color: black;
+        }
+        .next:hover{
+        color: black;
+        }
+        @media screen and (max-width: 930px) {
+            .mid{
+                height: 50%;
+                width: 70%;
+                background-color: brown ;
+            }
+        }
+        .circles{
+            position: absolute;
+            width: 10%;
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            bottom: 0%;
+            left: 45%;
+            color: grey;
+        }
+        .on{
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mid">
+            <div class="sliders">
+                <img src="samsun1.jpg" alt="" class="slide active">
+                <img src="samsun2.jpg" alt="" class="slide">                
+                <img src="samsun3.jpg" alt="" class="slide last">
+            </div>
+            <div class="buttons">
+                <i class="fa-solid fa-chevron-left prev fa-2x active" ></i>
+                <i class="fa-solid fa-chevron-right fa-2x next active" ></i>
+            </div>
+            <div class="circles">
+                <i class="fa-solid fa-circle  cir on one" onclick="first()"></i>
+                <i class="fa-solid fa-circle cir two" onclick="second()"></i>
+                <i class="fa-solid fa-circle cir tree" onclick="third()"></i>
+            </div>
+        </div>    
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
